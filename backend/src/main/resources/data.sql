@@ -1,1 +1,2 @@
 INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Maria', '464.287.008-32', 5000.00, TIMESTAMP WITH TIME ZONE '2020-07-14T10:00:00Z', 2)
+INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Lucas', '434.282.003-25', 2000.00, TIMESTAMP WITH TIME ZONE '2020-02-18T20:00:00Z', 10)
