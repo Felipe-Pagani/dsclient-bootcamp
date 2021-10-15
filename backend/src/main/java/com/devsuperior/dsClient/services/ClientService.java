@@ -45,6 +45,7 @@ public class ClientService {
 	public ClientDTO insert(ClientDTO dto) {
 		Client client = new Client();
 		insertEntityClient(dto, client);
+		client = repository.save(client);
 		return new ClientDTO(client);
 	}
 	
@@ -54,6 +55,7 @@ public class ClientService {
 		try {
 			Client client = repository.getOne(id);
 			insertEntityClient(dto, client);
+			client = repository.save(client);
 			return new ClientDTO(client);
 		}
 		catch(EntityNotFoundException e) {
@@ -83,7 +85,6 @@ public class ClientService {
 		client.setIncome(dto.getIncome());
 		client.setBirthDate(dto.getBirthDate());
 		client.setChildren(dto.getChildren());
-		client = repository.save(client);
 	}
 
 	
